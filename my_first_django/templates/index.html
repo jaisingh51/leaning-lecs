@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Hello i m in the index.html</h1>
+
+    <table>
+      <thead>
+        <th>NAME</th>
+        <th>Date</th>
+      </thead>
+    {%if access_record%}
+             {% for a in access_record%}
+                   <tr>
+                     <td>{{a.name}}</td>
+                     <td>{{a.date}}</td>
+                   </tr>
+                   {%endfor%}
+          {%else%}
+          <p>no rec found</p>
+          {%endif%}         
+
+
+  </body>
+</html>
